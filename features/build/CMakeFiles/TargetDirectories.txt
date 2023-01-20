@@ -1,0 +1,3 @@
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/build/CMakeFiles/stitch.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/build/CMakeFiles/edit_cache.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/build/CMakeFiles/rebuild_cache.dir

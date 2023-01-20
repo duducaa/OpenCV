@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "basics",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "changeConBri::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-changeConBri-1e8da2d02720e132c379.json",
+					"name" : "changeConBri",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "threshold::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-threshold-8d28fe6a5559970169a9.json",
+					"name" : "threshold",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/media/duca/D2EC63C1EC639F0B/programa\u00e7\u00e3o/OPENCV/basics/build",
+		"source" : "/media/duca/D2EC63C1EC639F0B/programa\u00e7\u00e3o/OPENCV/basics"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

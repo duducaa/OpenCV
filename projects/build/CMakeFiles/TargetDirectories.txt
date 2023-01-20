@@ -1,0 +1,6 @@
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/shapeClassifier.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/colorDetection.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/bookFinder.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/vignette.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/edit_cache.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/projects/build/CMakeFiles/rebuild_cache.dir

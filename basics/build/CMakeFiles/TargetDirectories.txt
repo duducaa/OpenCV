@@ -1,0 +1,4 @@
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles/changeConBri.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles/threshold.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles/edit_cache.dir
+/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles/rebuild_cache.dir

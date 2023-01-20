@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/build",
+  "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/stitch.dir/src/stitch.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/src/stitch.cpp",
+  "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/features/src/stitch.cpp"
+}
+]
