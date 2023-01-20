@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "moneyCount"
+			"path" : "objInfo"
 		}
 	],
 	"backtrace" : 1,
@@ -82,7 +82,7 @@
 			]
 		}
 	],
-	"id" : "moneyCount::@6890427a1f51a3e7e1df",
+	"id" : "objInfo::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -368,8 +368,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "moneyCount",
-	"nameOnDisk" : "moneyCount",
+	"name" : "objInfo",
+	"nameOnDisk" : "objInfo",
 	"paths" : 
 	{
 		"build" : ".",
@@ -390,7 +390,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/moneyCount.cpp",
+			"path" : "src/objInfo.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

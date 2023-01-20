@@ -169,19 +169,6 @@ vignette/fast:
 .PHONY : vignette/fast
 
 #=============================================================================
-# Target rules for targets named moneyCount
-
-# Build rule for target.
-moneyCount: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 moneyCount
-.PHONY : moneyCount
-
-# fast build rule for target.
-moneyCount/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/build
-.PHONY : moneyCount/fast
-
-#=============================================================================
 # Target rules for targets named objInfo
 
 # Build rule for target.
@@ -241,30 +228,6 @@ src/colorDetection.s: src/colorDetection.cpp.s
 src/colorDetection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorDetection.dir/build.make CMakeFiles/colorDetection.dir/src/colorDetection.cpp.s
 .PHONY : src/colorDetection.cpp.s
-
-src/moneyCount.o: src/moneyCount.cpp.o
-.PHONY : src/moneyCount.o
-
-# target to build an object file
-src/moneyCount.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.o
-.PHONY : src/moneyCount.cpp.o
-
-src/moneyCount.i: src/moneyCount.cpp.i
-.PHONY : src/moneyCount.i
-
-# target to preprocess a source file
-src/moneyCount.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.i
-.PHONY : src/moneyCount.cpp.i
-
-src/moneyCount.s: src/moneyCount.cpp.s
-.PHONY : src/moneyCount.s
-
-# target to generate assembly for a file
-src/moneyCount.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.s
-.PHONY : src/moneyCount.cpp.s
 
 src/objInfo.o: src/objInfo.cpp.o
 .PHONY : src/objInfo.o
@@ -348,7 +311,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bookFinder"
 	@echo "... colorDetection"
-	@echo "... moneyCount"
 	@echo "... objInfo"
 	@echo "... shapeClassifier"
 	@echo "... vignette"
@@ -358,9 +320,6 @@ help:
 	@echo "... src/colorDetection.o"
 	@echo "... src/colorDetection.i"
 	@echo "... src/colorDetection.s"
-	@echo "... src/moneyCount.o"
-	@echo "... src/moneyCount.i"
-	@echo "... src/moneyCount.s"
 	@echo "... src/objInfo.o"
 	@echo "... src/objInfo.i"
 	@echo "... src/objInfo.s"

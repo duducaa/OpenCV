@@ -53,6 +53,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/colorDetection.dir/DependInfo.cmake"
   "CMakeFiles/bookFinder.dir/DependInfo.cmake"
   "CMakeFiles/vignette.dir/DependInfo.cmake"
-  "CMakeFiles/moneyCount.dir/DependInfo.cmake"
   "CMakeFiles/objInfo.dir/DependInfo.cmake"
   )

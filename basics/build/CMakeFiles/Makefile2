@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/buil
 all: CMakeFiles/changeConBri.dir/all
 all: CMakeFiles/threshold.dir/all
 all: CMakeFiles/canny.dir/all
+all: CMakeFiles/structs.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/changeConBri.dir/clean
 clean: CMakeFiles/threshold.dir/clean
 clean: CMakeFiles/canny.dir/clean
+clean: CMakeFiles/structs.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -111,7 +113,7 @@ CMakeFiles/changeConBri.dir/clean:
 CMakeFiles/threshold.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=5,6 "Built target threshold"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=7,8 "Built target threshold"
 .PHONY : CMakeFiles/threshold.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +157,32 @@ canny: CMakeFiles/canny.dir/rule
 CMakeFiles/canny.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/clean
 .PHONY : CMakeFiles/canny.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/structs.dir
+
+# All Build rule for target.
+CMakeFiles/structs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=5,6 "Built target structs"
+.PHONY : CMakeFiles/structs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/structs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/structs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 0
+.PHONY : CMakeFiles/structs.dir/rule
+
+# Convenience name for target.
+structs: CMakeFiles/structs.dir/rule
+.PHONY : structs
+
+# clean rule for target.
+CMakeFiles/structs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/clean
+.PHONY : CMakeFiles/structs.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

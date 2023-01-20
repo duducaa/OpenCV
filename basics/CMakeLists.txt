@@ -13,3 +13,6 @@ target_link_libraries(threshold ${OpenCV_LIBS})
 
 add_executable(canny src/canny.cpp)
 target_link_libraries(canny ${OpenCV_LIBS})
+
+add_executable(structs src/structs.cpp)
+target_link_libraries(structs ${OpenCV_LIBS})

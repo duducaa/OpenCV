@@ -52,4 +52,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/changeConBri.dir/DependInfo.cmake"
   "CMakeFiles/threshold.dir/DependInfo.cmake"
   "CMakeFiles/canny.dir/DependInfo.cmake"
+  "CMakeFiles/structs.dir/DependInfo.cmake"
   )

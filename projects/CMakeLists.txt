@@ -17,8 +17,5 @@ target_link_libraries(bookFinder ${OpenCV_LIBS})
 add_executable(vignette src/vignette.cpp)
 target_link_libraries(vignette ${OpenCV_LIBS})
 
-add_executable(moneyCount src/moneyCount.cpp)
-target_link_libraries(moneyCount ${OpenCV_LIBS})
-
 add_executable(objInfo src/objInfo.cpp)
 target_link_libraries(objInfo ${OpenCV_LIBS})

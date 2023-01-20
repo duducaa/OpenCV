@@ -155,6 +155,19 @@ canny/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/build
 .PHONY : canny/fast
 
+#=============================================================================
+# Target rules for targets named structs
+
+# Build rule for target.
+structs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 structs
+.PHONY : structs
+
+# fast build rule for target.
+structs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/build
+.PHONY : structs/fast
+
 src/canny.o: src/canny.cpp.o
 .PHONY : src/canny.o
 
@@ -203,6 +216,30 @@ src/changeConBri.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/changeConBri.dir/build.make CMakeFiles/changeConBri.dir/src/changeConBri.cpp.s
 .PHONY : src/changeConBri.cpp.s
 
+src/structs.o: src/structs.cpp.o
+.PHONY : src/structs.o
+
+# target to build an object file
+src/structs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/src/structs.cpp.o
+.PHONY : src/structs.cpp.o
+
+src/structs.i: src/structs.cpp.i
+.PHONY : src/structs.i
+
+# target to preprocess a source file
+src/structs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/src/structs.cpp.i
+.PHONY : src/structs.cpp.i
+
+src/structs.s: src/structs.cpp.s
+.PHONY : src/structs.s
+
+# target to generate assembly for a file
+src/structs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/src/structs.cpp.s
+.PHONY : src/structs.cpp.s
+
 src/threshold.o: src/threshold.cpp.o
 .PHONY : src/threshold.o
 
@@ -237,6 +274,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... canny"
 	@echo "... changeConBri"
+	@echo "... structs"
 	@echo "... threshold"
 	@echo "... src/canny.o"
 	@echo "... src/canny.i"
@@ -244,6 +282,9 @@ help:
 	@echo "... src/changeConBri.o"
 	@echo "... src/changeConBri.i"
 	@echo "... src/changeConBri.s"
+	@echo "... src/structs.o"
+	@echo "... src/structs.i"
+	@echo "... src/structs.s"
 	@echo "... src/threshold.o"
 	@echo "... src/threshold.i"
 	@echo "... src/threshold.s"

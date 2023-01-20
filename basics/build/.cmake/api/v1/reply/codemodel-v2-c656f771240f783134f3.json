@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -52,6 +54,13 @@
 					"id" : "changeConBri::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-changeConBri-Debug-ee4924fdb4c4afaf4be2.json",
 					"name" : "changeConBri",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "structs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-structs-Debug-c7a148c028f4cac78b46.json",
+					"name" : "structs",
 					"projectIndex" : 0
 				},
 				{
