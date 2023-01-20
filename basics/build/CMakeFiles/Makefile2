@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/buil
 # The main recursive "all" target.
 all: CMakeFiles/changeConBri.dir/all
 all: CMakeFiles/threshold.dir/all
+all: CMakeFiles/canny.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/changeConBri.dir/clean
 clean: CMakeFiles/threshold.dir/clean
+clean: CMakeFiles/canny.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,7 +85,7 @@ clean: CMakeFiles/threshold.dir/clean
 CMakeFiles/changeConBri.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/changeConBri.dir/build.make CMakeFiles/changeConBri.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/changeConBri.dir/build.make CMakeFiles/changeConBri.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=1,2 "Built target changeConBri"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=3,4 "Built target changeConBri"
 .PHONY : CMakeFiles/changeConBri.dir/all
 
 # Build rule for subdir invocation for target.
@@ -109,7 +111,7 @@ CMakeFiles/changeConBri.dir/clean:
 CMakeFiles/threshold.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=3,4 "Built target threshold"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=5,6 "Built target threshold"
 .PHONY : CMakeFiles/threshold.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +129,32 @@ threshold: CMakeFiles/threshold.dir/rule
 CMakeFiles/threshold.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/clean
 .PHONY : CMakeFiles/threshold.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/canny.dir
+
+# All Build rule for target.
+CMakeFiles/canny.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=1,2 "Built target canny"
+.PHONY : CMakeFiles/canny.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/canny.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/canny.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 0
+.PHONY : CMakeFiles/canny.dir/rule
+
+# Convenience name for target.
+canny: CMakeFiles/canny.dir/rule
+.PHONY : canny
+
+# clean rule for target.
+CMakeFiles/canny.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/clean
+.PHONY : CMakeFiles/canny.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4
 
-CXX_FLAGS = -std=gnu++11
+CXX_FLAGS = -g -std=gnu++11
 

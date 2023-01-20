@@ -10,3 +10,6 @@ target_link_libraries(changeConBri ${OpenCV_LIBS})
 
 add_executable(threshold src/threshold.cpp)
 target_link_libraries(threshold ${OpenCV_LIBS})
+
+add_executable(canny src/canny.cpp)
+target_link_libraries(canny ${OpenCV_LIBS})

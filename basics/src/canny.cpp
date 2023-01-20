@@ -11,31 +11,30 @@ int main(int argc, char ** argv) {
     Mat img = imread(path);
     if (img.empty()) return 1;
 
-    Mat gray;
-    cvtColor(img, gray, COLOR_BGR2GRAY);
-
-    Mat blur;
-    GaussianBlur(gray, blur, Size(3, 3), 0);
-
     string window = "Threshold";
     namedWindow(window);
     createTrackbar("Threshold", window, nullptr, 255);
     createTrackbar("Max Value", window, nullptr, 255);
 
-    Mat result;
-
     while (true) {
+        Mat clone = img.clone();
+        Mat gray;
+        cvtColor(clone, gray, COLOR_BGR2GRAY);
+
+        Mat blur;
+        GaussianBlur(gray, blur, Size(5, 5), 0);
+
         int thresh = getTrackbarPos("Threshold", window);
         int maxValue = getTrackbarPos("Max Value", window);
         if (thresh > maxValue) {
             setTrackbarPos("Max Value", window, thresh);
         }
 
-        Mat threshImg;
-        threshold(blur, threshImg, thresh, maxValue, THRESH_BINARY_INV);
-        result = threshImg;
+        Mat canny;
+        Canny(blur, canny, thresh, maxValue);
 
-        imshow(window, threshImg);
+        imshow(window, canny);
+        imshow("Img", clone);
         if ((char) waitKey(1) == 27) break;
     }
 

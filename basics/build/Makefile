@@ -142,6 +142,43 @@ threshold/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
 .PHONY : threshold/fast
 
+#=============================================================================
+# Target rules for targets named canny
+
+# Build rule for target.
+canny: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canny
+.PHONY : canny
+
+# fast build rule for target.
+canny/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/build
+.PHONY : canny/fast
+
+src/canny.o: src/canny.cpp.o
+.PHONY : src/canny.o
+
+# target to build an object file
+src/canny.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/src/canny.cpp.o
+.PHONY : src/canny.cpp.o
+
+src/canny.i: src/canny.cpp.i
+.PHONY : src/canny.i
+
+# target to preprocess a source file
+src/canny.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/src/canny.cpp.i
+.PHONY : src/canny.cpp.i
+
+src/canny.s: src/canny.cpp.s
+.PHONY : src/canny.s
+
+# target to generate assembly for a file
+src/canny.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canny.dir/build.make CMakeFiles/canny.dir/src/canny.cpp.s
+.PHONY : src/canny.cpp.s
+
 src/changeConBri.o: src/changeConBri.cpp.o
 .PHONY : src/changeConBri.o
 
@@ -198,8 +235,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... canny"
 	@echo "... changeConBri"
 	@echo "... threshold"
+	@echo "... src/canny.o"
+	@echo "... src/canny.i"
+	@echo "... src/canny.s"
 	@echo "... src/changeConBri.o"
 	@echo "... src/changeConBri.i"
 	@echo "... src/changeConBri.s"

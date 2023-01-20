@@ -6,15 +6,15 @@ using namespace std;
 
 void HSVTrackbars(string window);
 vector<int> GetTrackValues(string window);
-vector<Mat> detection(Mat frame, vector<int> lim);
+vector<Mat> detection(Mat frame, vector<int> lim, int area);
 
 int main(int argc, char ** argv) {
 
     VideoCapture cap(0);
     if (!cap.isOpened()) return 1;
 
-    double capWidth = 640;
-    double capHeight = 480;
+    int capWidth = 640;
+    int capHeight = 480;
 
     cap.set(CAP_PROP_FRAME_WIDTH, capWidth);
     cap.set(CAP_PROP_FRAME_HEIGHT, capHeight);
@@ -22,7 +22,7 @@ int main(int argc, char ** argv) {
     string window = "Trackbars";
     namedWindow(window);
     HSVTrackbars(window);
-    createTrackbar("Area", window, nullptr, capWidth * capHeight);
+    createTrackbar("Area", window, nullptr, 10000);
 
     while (true) {
         Mat frame;
@@ -30,12 +30,14 @@ int main(int argc, char ** argv) {
         flip(frame, frame, 1);
 
         vector<int> lim = GetTrackValues(window);
-        vector<Mat> res = detection(frame, lim);
+        int area = getTrackbarPos("Area", window);
+
+        vector<Mat> res = detection(frame, lim, area);
 
         Mat output(frame.rows * 2, frame.cols, frame.type());
         vconcat(res, output);
 
-        imshow("Display", frame);
+        imshow("Display", output);
         if ((char) waitKey(1) == 27) break;
     }
 
@@ -81,7 +83,7 @@ vector<int> GetTrackValues(string window) {
 
 }
 
-vector<Mat> detection(Mat frame, vector<int> lim) {
+Mat GetMask(Mat frame, vector<int> lim) {
 
     Mat hsv;
     cvtColor(frame, hsv, COLOR_BGR2HSV);
@@ -98,21 +100,75 @@ vector<Mat> detection(Mat frame, vector<int> lim) {
     Mat mask;
     inRange(hsv, lower, upper, mask);
 
+    return mask;
+
+}
+
+Point GetTextPoint(vector<Point> cnt) {
+
+    Rect rect = boundingRect(cnt);
+    return Point(rect.x + rect.width / 4, rect.y + rect.height / 2);
+
+}
+
+double GetRatio(vector<Point> cnt) {
+
+    Rect rect = boundingRect(cnt);
+    return rect.height / (double) rect.width;
+
+}
+
+string GetShape(vector<Point> cnt) {
+
+    string shape = "-1";
+    int vert = cnt.size();
+    if (vert == 3) shape = "Triangle";
+    if (vert == 4) {
+        double ratio = GetRatio(cnt);
+        if (abs(ratio - 1) <= 0.04) shape = "Square";
+        else shape = "Rectangle";
+    }
+    if (vert == 8) {
+        double ratio = GetRatio(cnt);
+        if (abs(ratio - 1) <= 0.04) shape = "Circle";
+        else shape = "Ellipse";
+    }
+    if (vert == 10 && !isContourConvex(cnt)) shape = "Star";
+
+    if (shape == "-1") return "Some Shape";
+    return shape;
+
+}
+
+vector<Mat> detection(Mat frame, vector<int> lim, int area) {
+
+    Mat mask = GetMask(frame, lim);
+
     vector<vector<Point>> contours;
     findContours(mask, contours, RETR_EXTERNAL, CHAIN_APPROX_NONE);
     if (!contours.empty()) {
-        double maxArea = contourArea(contours[0]);
-        int maxId = 0;
         int i = 0;
         for (vector<Point> cnt : contours) {
-            if (maxArea < contourArea(cnt)) {
-                maxArea = contourArea(cnt);
-                maxId = i;
+            if (contourArea(cnt) >= area) {
+                double peri = arcLength(cnt, true);
+                vector<Point> approx;
+                approxPolyDP(cnt, approx, peri * 0.02, true);
+                
+                drawContours(frame, contours, i, Scalar(0, 255, 0), 3);
+                
+                string shape = GetShape(approx);
+                Point pt = GetTextPoint(approx);
+                putText(frame, shape, pt, FONT_HERSHEY_COMPLEX, 1, Scalar::all(0), 3);
+                
+                string areaText = "Area: " + to_string(contourArea(cnt));
+                Point pt2 = Point(pt.x, pt.y + 50);
+                putText(frame, areaText, pt2, FONT_HERSHEY_COMPLEX, 1, Scalar::all(0), 3); 
+                
             }
             i++;
         }
 
-        drawContours(frame, contours, maxId, Scalar(0, 255, 0), 3);
+        
     }
 
     merge((vector<Mat>) {mask, mask, mask}, mask);
