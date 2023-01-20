@@ -18,7 +18,9 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -36,7 +38,9 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -54,6 +58,20 @@
 					"id" : "colorDetection::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-colorDetection-Debug-64fdac7a89424cf48378.json",
 					"name" : "colorDetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "moneyCount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-moneyCount-Debug-a79e8fda9588d4262436.json",
+					"name" : "moneyCount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "objInfo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-objInfo-Debug-a7155ea0cc0af90572ab.json",
+					"name" : "objInfo",
 					"projectIndex" : 0
 				},
 				{

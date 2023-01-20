@@ -168,6 +168,32 @@ vignette/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vignette.dir/build.make CMakeFiles/vignette.dir/build
 .PHONY : vignette/fast
 
+#=============================================================================
+# Target rules for targets named moneyCount
+
+# Build rule for target.
+moneyCount: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 moneyCount
+.PHONY : moneyCount
+
+# fast build rule for target.
+moneyCount/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/build
+.PHONY : moneyCount/fast
+
+#=============================================================================
+# Target rules for targets named objInfo
+
+# Build rule for target.
+objInfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 objInfo
+.PHONY : objInfo
+
+# fast build rule for target.
+objInfo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/objInfo.dir/build.make CMakeFiles/objInfo.dir/build
+.PHONY : objInfo/fast
+
 src/bookFinder.o: src/bookFinder.cpp.o
 .PHONY : src/bookFinder.o
 
@@ -215,6 +241,54 @@ src/colorDetection.s: src/colorDetection.cpp.s
 src/colorDetection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorDetection.dir/build.make CMakeFiles/colorDetection.dir/src/colorDetection.cpp.s
 .PHONY : src/colorDetection.cpp.s
+
+src/moneyCount.o: src/moneyCount.cpp.o
+.PHONY : src/moneyCount.o
+
+# target to build an object file
+src/moneyCount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.o
+.PHONY : src/moneyCount.cpp.o
+
+src/moneyCount.i: src/moneyCount.cpp.i
+.PHONY : src/moneyCount.i
+
+# target to preprocess a source file
+src/moneyCount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.i
+.PHONY : src/moneyCount.cpp.i
+
+src/moneyCount.s: src/moneyCount.cpp.s
+.PHONY : src/moneyCount.s
+
+# target to generate assembly for a file
+src/moneyCount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moneyCount.dir/build.make CMakeFiles/moneyCount.dir/src/moneyCount.cpp.s
+.PHONY : src/moneyCount.cpp.s
+
+src/objInfo.o: src/objInfo.cpp.o
+.PHONY : src/objInfo.o
+
+# target to build an object file
+src/objInfo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/objInfo.dir/build.make CMakeFiles/objInfo.dir/src/objInfo.cpp.o
+.PHONY : src/objInfo.cpp.o
+
+src/objInfo.i: src/objInfo.cpp.i
+.PHONY : src/objInfo.i
+
+# target to preprocess a source file
+src/objInfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/objInfo.dir/build.make CMakeFiles/objInfo.dir/src/objInfo.cpp.i
+.PHONY : src/objInfo.cpp.i
+
+src/objInfo.s: src/objInfo.cpp.s
+.PHONY : src/objInfo.s
+
+# target to generate assembly for a file
+src/objInfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/objInfo.dir/build.make CMakeFiles/objInfo.dir/src/objInfo.cpp.s
+.PHONY : src/objInfo.cpp.s
 
 src/shapeClassifier.o: src/shapeClassifier.cpp.o
 .PHONY : src/shapeClassifier.o
@@ -274,6 +348,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bookFinder"
 	@echo "... colorDetection"
+	@echo "... moneyCount"
+	@echo "... objInfo"
 	@echo "... shapeClassifier"
 	@echo "... vignette"
 	@echo "... src/bookFinder.o"
@@ -282,6 +358,12 @@ help:
 	@echo "... src/colorDetection.o"
 	@echo "... src/colorDetection.i"
 	@echo "... src/colorDetection.s"
+	@echo "... src/moneyCount.o"
+	@echo "... src/moneyCount.i"
+	@echo "... src/moneyCount.s"
+	@echo "... src/objInfo.o"
+	@echo "... src/objInfo.i"
+	@echo "... src/objInfo.s"
 	@echo "... src/shapeClassifier.o"
 	@echo "... src/shapeClassifier.i"
 	@echo "... src/shapeClassifier.s"
