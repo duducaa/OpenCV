@@ -34,7 +34,7 @@ int main(int argc, char ** argv) {
         GaussianBlur(piece, piece, Size(ksize, ksize), 0);
 
         Mat output;
-        add(piece, out, output);
+        addWeighted(piece, 0.7, out, 0.3, 1, output);
 
         imshow(window, output);
         if ((char) waitKey(1) == 27) break;
