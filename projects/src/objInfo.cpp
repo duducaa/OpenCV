@@ -8,36 +8,49 @@ void HSVTrackbars(string window);
 vector<int> GetTrackValues(string window);
 vector<Mat> detection(Mat frame, vector<int> lim, int area);
 
+//255 95 101
 int main(int argc, char ** argv) {
 
-    VideoCapture cap(0);
-    if (!cap.isOpened()) return 1;
+    VideoCapture cap;
+    string path = "http://[2804:1ef8:2c84:6b00:1ecc:d6ff:fe44:df63]:5000/video";
+    if (!cap.open(path)) return 1;
 
-    int capWidth = 640;
-    int capHeight = 480;
+    //VideoCapture cap(0);
+    //if (!cap.isOpened()) return 1;
 
-    cap.set(CAP_PROP_FRAME_WIDTH, capWidth);
-    cap.set(CAP_PROP_FRAME_HEIGHT, capHeight);
+    //int capWidth = 640;
+    //int capHeight = 480;
+
+    //cap.set(CAP_PROP_FRAME_WIDTH, capWidth);
+    //cap.set(CAP_PROP_FRAME_HEIGHT, capHeight);
 
     string window = "Trackbars";
     namedWindow(window);
     HSVTrackbars(window);
     createTrackbar("Area", window, nullptr, 10000);
 
+    int id_frame = 0;
     while (true) {
         Mat frame;
         cap >> frame;
-        flip(frame, frame, 1);
+        //flip(frame, frame, 1);
+
+        int area = getTrackbarPos("Area", window);
+        resize(frame, frame, Size(frame.cols * 0.4, frame.rows * 0.4));
+        setTrackbarMax("Area", window, frame.cols * frame.rows);
 
         vector<int> lim = GetTrackValues(window);
-        int area = getTrackbarPos("Area", window);
-
         vector<Mat> res = detection(frame, lim, area);
 
         Mat output(frame.rows * 2, frame.cols, frame.type());
         vconcat(res, output);
 
         imshow("Display", output);
+        if ((char) waitKey(1) == 32) {
+            imwrite("../pictures_webcam/picture" + to_string(id_frame) + ".jpg", frame);
+            id_frame++;
+            cout << "Frame saved!" << endl;
+        }
         if ((char) waitKey(1) == 27) break;
     }
 

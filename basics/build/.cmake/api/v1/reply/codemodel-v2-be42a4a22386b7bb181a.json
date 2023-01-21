@@ -18,7 +18,10 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5,
+						6
 					]
 				}
 			],
@@ -36,7 +39,10 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5,
+						6
 					]
 				}
 			],
@@ -45,28 +51,49 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "canny::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-canny-Debug-ee98377fdf93a812de85.json",
+					"jsonFile" : "target-canny-Debug-2aa8e5b14c34e17e6353.json",
 					"name" : "canny",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "changeConBri::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-changeConBri-Debug-ee4924fdb4c4afaf4be2.json",
+					"jsonFile" : "target-changeConBri-Debug-b0c27ea3f92064bd636f.json",
 					"name" : "changeConBri",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "crop::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crop-Debug-a5acafbe1d8921391e3a.json",
+					"name" : "crop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_image-Debug-e2af6aa8b3126c8e753e.json",
+					"name" : "read_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_video::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_video-Debug-97d7ec7b4452864e5642.json",
+					"name" : "read_video",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "structs::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-structs-Debug-c7a148c028f4cac78b46.json",
+					"jsonFile" : "target-structs-Debug-772c4446e46eaba205c8.json",
 					"name" : "structs",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "threshold::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-threshold-Debug-e76df086682c2f646741.json",
+					"jsonFile" : "target-threshold-Debug-a6e6448bdbd064bdb277.json",
 					"name" : "threshold",
 					"projectIndex" : 0
 				}

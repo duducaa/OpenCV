@@ -49,8 +49,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/read_image.dir/DependInfo.cmake"
+  "CMakeFiles/read_video.dir/DependInfo.cmake"
   "CMakeFiles/changeConBri.dir/DependInfo.cmake"
   "CMakeFiles/threshold.dir/DependInfo.cmake"
   "CMakeFiles/canny.dir/DependInfo.cmake"
   "CMakeFiles/structs.dir/DependInfo.cmake"
+  "CMakeFiles/crop.dir/DependInfo.cmake"
   )

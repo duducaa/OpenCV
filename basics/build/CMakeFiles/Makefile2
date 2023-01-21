@@ -63,10 +63,13 @@ CMAKE_BINARY_DIR = /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/buil
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/read_image.dir/all
+all: CMakeFiles/read_video.dir/all
 all: CMakeFiles/changeConBri.dir/all
 all: CMakeFiles/threshold.dir/all
 all: CMakeFiles/canny.dir/all
 all: CMakeFiles/structs.dir/all
+all: CMakeFiles/crop.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,11 +77,66 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/read_image.dir/clean
+clean: CMakeFiles/read_video.dir/clean
 clean: CMakeFiles/changeConBri.dir/clean
 clean: CMakeFiles/threshold.dir/clean
 clean: CMakeFiles/canny.dir/clean
 clean: CMakeFiles/structs.dir/clean
+clean: CMakeFiles/crop.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/read_image.dir
+
+# All Build rule for target.
+CMakeFiles/read_image.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=7,8 "Built target read_image"
+.PHONY : CMakeFiles/read_image.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/read_image.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/read_image.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 0
+.PHONY : CMakeFiles/read_image.dir/rule
+
+# Convenience name for target.
+read_image: CMakeFiles/read_image.dir/rule
+.PHONY : read_image
+
+# clean rule for target.
+CMakeFiles/read_image.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/clean
+.PHONY : CMakeFiles/read_image.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/read_video.dir
+
+# All Build rule for target.
+CMakeFiles/read_video.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=9,10 "Built target read_video"
+.PHONY : CMakeFiles/read_video.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/read_video.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/read_video.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 0
+.PHONY : CMakeFiles/read_video.dir/rule
+
+# Convenience name for target.
+read_video: CMakeFiles/read_video.dir/rule
+.PHONY : read_video
+
+# clean rule for target.
+CMakeFiles/read_video.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/clean
+.PHONY : CMakeFiles/read_video.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/changeConBri.dir
@@ -113,7 +171,7 @@ CMakeFiles/changeConBri.dir/clean:
 CMakeFiles/threshold.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/threshold.dir/build.make CMakeFiles/threshold.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=7,8 "Built target threshold"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=13,14 "Built target threshold"
 .PHONY : CMakeFiles/threshold.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +223,7 @@ CMakeFiles/canny.dir/clean:
 CMakeFiles/structs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=5,6 "Built target structs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=11,12 "Built target structs"
 .PHONY : CMakeFiles/structs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -183,6 +241,32 @@ structs: CMakeFiles/structs.dir/rule
 CMakeFiles/structs.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/clean
 .PHONY : CMakeFiles/structs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/crop.dir
+
+# All Build rule for target.
+CMakeFiles/crop.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles --progress-num=5,6 "Built target crop"
+.PHONY : CMakeFiles/crop.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/crop.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build/CMakeFiles 0
+.PHONY : CMakeFiles/crop.dir/rule
+
+# Convenience name for target.
+crop: CMakeFiles/crop.dir/rule
+.PHONY : crop
+
+# clean rule for target.
+CMakeFiles/crop.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/clean
+.PHONY : CMakeFiles/crop.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named read_image
+
+# Build rule for target.
+read_image: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_image
+.PHONY : read_image
+
+# fast build rule for target.
+read_image/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/build
+.PHONY : read_image/fast
+
+#=============================================================================
+# Target rules for targets named read_video
+
+# Build rule for target.
+read_video: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_video
+.PHONY : read_video
+
+# fast build rule for target.
+read_video/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/build
+.PHONY : read_video/fast
+
+#=============================================================================
 # Target rules for targets named changeConBri
 
 # Build rule for target.
@@ -168,6 +194,19 @@ structs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/structs.dir/build.make CMakeFiles/structs.dir/build
 .PHONY : structs/fast
 
+#=============================================================================
+# Target rules for targets named crop
+
+# Build rule for target.
+crop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 crop
+.PHONY : crop
+
+# fast build rule for target.
+crop/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/build
+.PHONY : crop/fast
+
 src/canny.o: src/canny.cpp.o
 .PHONY : src/canny.o
 
@@ -215,6 +254,78 @@ src/changeConBri.s: src/changeConBri.cpp.s
 src/changeConBri.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/changeConBri.dir/build.make CMakeFiles/changeConBri.dir/src/changeConBri.cpp.s
 .PHONY : src/changeConBri.cpp.s
+
+src/crop.o: src/crop.cpp.o
+.PHONY : src/crop.o
+
+# target to build an object file
+src/crop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/src/crop.cpp.o
+.PHONY : src/crop.cpp.o
+
+src/crop.i: src/crop.cpp.i
+.PHONY : src/crop.i
+
+# target to preprocess a source file
+src/crop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/src/crop.cpp.i
+.PHONY : src/crop.cpp.i
+
+src/crop.s: src/crop.cpp.s
+.PHONY : src/crop.s
+
+# target to generate assembly for a file
+src/crop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crop.dir/build.make CMakeFiles/crop.dir/src/crop.cpp.s
+.PHONY : src/crop.cpp.s
+
+src/read_image.o: src/read_image.cpp.o
+.PHONY : src/read_image.o
+
+# target to build an object file
+src/read_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/src/read_image.cpp.o
+.PHONY : src/read_image.cpp.o
+
+src/read_image.i: src/read_image.cpp.i
+.PHONY : src/read_image.i
+
+# target to preprocess a source file
+src/read_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/src/read_image.cpp.i
+.PHONY : src/read_image.cpp.i
+
+src/read_image.s: src/read_image.cpp.s
+.PHONY : src/read_image.s
+
+# target to generate assembly for a file
+src/read_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_image.dir/build.make CMakeFiles/read_image.dir/src/read_image.cpp.s
+.PHONY : src/read_image.cpp.s
+
+src/read_video.o: src/read_video.cpp.o
+.PHONY : src/read_video.o
+
+# target to build an object file
+src/read_video.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/src/read_video.cpp.o
+.PHONY : src/read_video.cpp.o
+
+src/read_video.i: src/read_video.cpp.i
+.PHONY : src/read_video.i
+
+# target to preprocess a source file
+src/read_video.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/src/read_video.cpp.i
+.PHONY : src/read_video.cpp.i
+
+src/read_video.s: src/read_video.cpp.s
+.PHONY : src/read_video.s
+
+# target to generate assembly for a file
+src/read_video.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_video.dir/build.make CMakeFiles/read_video.dir/src/read_video.cpp.s
+.PHONY : src/read_video.cpp.s
 
 src/structs.o: src/structs.cpp.o
 .PHONY : src/structs.o
@@ -274,6 +385,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... canny"
 	@echo "... changeConBri"
+	@echo "... crop"
+	@echo "... read_image"
+	@echo "... read_video"
 	@echo "... structs"
 	@echo "... threshold"
 	@echo "... src/canny.o"
@@ -282,6 +396,15 @@ help:
 	@echo "... src/changeConBri.o"
 	@echo "... src/changeConBri.i"
 	@echo "... src/changeConBri.s"
+	@echo "... src/crop.o"
+	@echo "... src/crop.i"
+	@echo "... src/crop.s"
+	@echo "... src/read_image.o"
+	@echo "... src/read_image.i"
+	@echo "... src/read_image.s"
+	@echo "... src/read_video.o"
+	@echo "... src/read_video.i"
+	@echo "... src/read_video.s"
 	@echo "... src/structs.o"
 	@echo "... src/structs.i"
 	@echo "... src/structs.s"

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "canny"
+			"path" : "read_video"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 15,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -82,7 +82,7 @@
 			]
 		}
 	],
-	"id" : "canny::@6890427a1f51a3e7e1df",
+	"id" : "read_video::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -368,8 +368,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "canny",
-	"nameOnDisk" : "canny",
+	"name" : "read_video",
+	"nameOnDisk" : "read_video",
 	"paths" : 
 	{
 		"build" : ".",
@@ -390,7 +390,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/canny.cpp",
+			"path" : "src/read_video.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -1,6 +1,16 @@
 [
 {
   "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build",
+  "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/read_image.dir/src/read_image.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/read_image.cpp",
+  "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/read_image.cpp"
+},
+{
+  "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build",
+  "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/read_video.dir/src/read_video.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/read_video.cpp",
+  "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/read_video.cpp"
+},
+{
+  "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build",
   "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/changeConBri.dir/src/changeConBri.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/changeConBri.cpp",
   "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/changeConBri.cpp"
 },
@@ -18,5 +28,10 @@
   "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build",
   "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/structs.dir/src/structs.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/structs.cpp",
   "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/structs.cpp"
+},
+{
+  "directory": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/build",
+  "command": "/usr/bin/g++  -I/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/include -isystem /usr/include/opencv4 -g -std=gnu++11 -o CMakeFiles/crop.dir/src/crop.cpp.o -c /media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/crop.cpp",
+  "file": "/media/duca/D2EC63C1EC639F0B/programação/OPENCV/basics/src/crop.cpp"
 }
 ]
