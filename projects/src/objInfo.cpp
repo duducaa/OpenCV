@@ -14,7 +14,8 @@ int main(int argc, char ** argv) {
     VideoCapture cap;
     string path = "http://[2804:1ef8:2c84:6b00:1ecc:d6ff:fe44:df63]:5000/video";
     if (!cap.open(path)) return 1;
-
+    
+    //comentado = para webcam do notebook
     //VideoCapture cap(0);
     //if (!cap.isOpened()) return 1;
 
